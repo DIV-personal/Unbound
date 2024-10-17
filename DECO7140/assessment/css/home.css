@@ -1,0 +1,144 @@
+.carousel {
+  text-align: center;
+  margin: 50px auto;
+  width: 90%;
+}
+
+.carousel h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.news {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.news-card {
+  flex: 0 0 33.33%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.news-card img {
+  width: 70%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.news-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.news-card p {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.5;
+}
+
+.news-card a {
+  display: block;
+  margin-top: 10px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: #555;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+button.prev {
+  left: 0;
+}
+
+button.next {
+  right: 0;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Gallery homepage slider carousel */
+
+.banner-section {
+  width: 100%;
+  padding: 2rem;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.banner-nav-menu a {
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+
+.slider-image-card {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  overflow-x: scroll;
+  width: 90%;
+  /* scrollbar-width: thin;  */
+  scrollbar-color: black transparent;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.image-wrapper::-webkit-scrollbar {
+  height: 8px; /* Height of the scrollbar */
+}
+
+.image-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.image-wrapper::-webkit-scrollbar-thumb {
+  background-color: black; /* Scrollbar color */
+  border-radius: 10px; /* Round scrollbar edges */
+}
+
+.image-cards {
+  display: flex;
+  transition: transform 0.3s ease;
+  width: max-content;
+  margin-top: 8rem;
+}
+
+.slider-image-card {
+  /* min-width: 25%; */
+  margin-right: 4rem;
+}
+
+.slider-image-card img {
+  height: 30rem;
+  display: block;
+}

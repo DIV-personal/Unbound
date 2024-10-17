@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listings</title>
+    <link rel="stylesheet" href="./css/css_reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloock&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./js/list_event.js" defer></script>
+    <!-- <script type="module" src="js/index.js" defer></script> -->
+  </head>
+  <body>
+    <div id="gridcontainer">
+      <header>
+        <!-- Navigation Bar -->
+        <div id="flexnavbar">
+          <div class="logo">
+            <img src="./images/P01_1_logo.jpg" alt="Unbound Logo" />
+          </div>
+          <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="artistblogs.html">Blog</a>
+            <a href="aboutus.html">About Us</a>
+          </nav>
+          <div class="searchbar">
+            <input type="text" placeholder="Search..." />
+          </div>
+        </div>
+      </header>
+      <main>
+        <!-- Creating Event Header -->
+        <section class="event-header">
+          <h1>Events Calender</h1>
+          <div class="filters">
+            <select>
+              <option>Category</option>
+            </select>
+            <button>View Saved Events</button>
+          </div>
+        </section>
+
+        <!-- Creating event list -->
+        <section class="event-list">
+          <!-- Event Card - 1 -->
+          <div class="event-card">
+            <div class="date">
+              <span class="day">1</span>
+              <span class="month">October</span>
+            </div>
+            <div class="event-info">
+              <h2>Radical Textile Art Display - Hyacinth</h2>
+              <p>Time: All day (1 Oct - 6 Nov)<br />Age: 6 years and above</p>
+              <p>
+                Fan of a textile artwork? Experience the touch and feel artwork.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event Card - 2 -->
+          <div class="event-card">
+            <div class="date">
+              <span class="day">25</span>
+              <span class="month">November</span>
+            </div>
+            <div class="event-info">
+              <h2>DRAG EXPRESSIONS by Ian Osterwalder</h2>
+              <p>
+                Time: All day (25th Nov - 1st Jan)<br />Age: 13 years and above
+              </p>
+              <p>
+                Photography exhibit by Ian Osterwalder, come and experience the
+                colors of expressions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event Card 3 -->
+          <div class="event-card">
+            <div class="date">
+              <span class="day">14</span>
+              <span class="month">November</span>
+            </div>
+            <div class="event-info">
+              <h2>Art Play Dates</h2>
+              <p>
+                Time: 5PM - 7PM (14th Nov - 15th Nov)<br />Age: 12 years and
+                under
+              </p>
+              <p>Art workshop for kids 1-12 - early learners.</p>
+            </div>
+          </div>
+
+          <!-- Event Card 4 -->
+          <div class="event-card">
+            <div class="date">
+              <span class="day">15</span>
+              <span class="month">January</span>
+            </div>
+            <div class="event-info">
+              <h2>Radical Textile Art Display - Hyacinth</h2>
+              <p>Time: All day (15 Jan - 14 Feb)<br />Age: 6 years and above</p>
+              <p>
+                Special - Low on Vision Collectives. Audio Descriptive Art
+                Gallery show with touch & experience the art.
+              </p>
+            </div>
+          </div>
+        </section>
+        <div class="buttons">
+          <button>Load More</button>
+          <button>Back to top</button>
+        </div>
+
+        <!-- Creating a form -->
+        <div class="eventForm">
+          <h1>Register your Event with us!</h1>
+          <p>Please fill the form below</p>
+          <form>
+            <!-- Event Type -->
+            <label for="event_type">Event Type:</label>
+            <input
+              type="text"
+              id="event_type"
+              name="event_type"
+              placeholder="Enter the name of the event"
+              required
+            />
+
+            <!-- Location of the Event -->
+            <label for="location">Location:</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              placeholder="Enter the location of the event"
+              required
+            />
+
+            <!-- Organiser -->
+            <label for="organiser">Organiser:</label>
+            <input
+              type="text"
+              id="organiser"
+              name="organiser"
+              placeholder="The event's organiser e.g., xyz creators"
+              maxlength="50"
+              required
+            />
+
+            <!-- Email -->
+            <label for="email">E-Mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@mail.com"
+              required
+            />
+
+            <!-- Event Description -->
+            <label for="description">Event Description:</label>
+            <input
+              type="text"
+              id="description"
+              name="description"
+              placeholder="Write a short description of the event"
+              maxlength="100"
+              required
+            />
+
+            <!-- Event date & time-->
+            <label for="date_time">Select Date & Time:</label>
+            <input
+              type="datetime-local"
+              id="date_time"
+              name="date_time"
+              required
+            />
+
+            <!-- Event Image -->
+            <label for="eventPhoto">Event Photo (Optional, 10MB):</label>
+            <input
+              type="file"
+              id="eventPhoto"
+              name="eventPhoto"
+              accept="image/*"
+            />
+            <small>*Accepted formats: JPG, PNG, GIF, Max size: 10MB.</small>
+
+            <!-- Package Information -->
+            <label>Select the Event Package</label>
+
+            <!-- Radio buttons are used when we need to pick a single option -->
+            <!-- Adding Radio buttons -->
+            <div class="radiogroup">
+              <label
+                ><input
+                  type="radio"
+                  name="Package"
+                  value="Member"
+                  required
+                />Member Package<span>$60.00</span></label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="Package"
+                  value="Educator/Professional"
+                  required
+                />Educator/Professional Package<span>$40.00</span></label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="Package"
+                  value="Student"
+                  required
+                />Student Package<span>$20.00</span></label
+              >
+              <button type="submit">Submit</button>
+              <button type="cancel">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </main>
+
+      <!-- Footer Code -->
+      <footer>
+        <p>© 2024 Divya Rastogi</p>
+        <ul class="social-media">
+          <li>
+            <a
+              ><img
+                class="social-logo"
+                src="./images/facebook.png"
+              />Facebook</a
+            >
+          </li>
+          <li>
+            <a
+              ><img
+                class="social-logo"
+                src="./images/instagram.png"
+              />Instagram</a
+            >
+          </li>
+          <li>
+            <a><img class="social-logo" src="./images/mail.png" />E-mail</a>
+          </li>
+          <li>
+            <a><img class="social-logo" src="./images/vimeo.png" />Vimeo</a>
+          </li>
+        </ul>
+        <!-- <p>&copy; 2024 Divya Rastogi. All rights reserved.</p> -->
+      </footer>
+    </div>
+  </body>
+</html>
